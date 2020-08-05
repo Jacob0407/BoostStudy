@@ -12,7 +12,11 @@ link_directories($ENV{BOOST_LIBRARY_DIR})
 
 # 将源代码添加到此项目的可执行文件。
 add_executable (AsioServer "AsioServer.cpp" "AsioServer.h")
+add_executable (SyncServer "Test/SyncServer.cpp")
+add_executable (SyncClient "Test/SyncClient.cpp")
 
 target_link_libraries(AsioServer $ENV{BOOST_LIBRARY_DIR})
+target_link_libraries(SyncServer $ENV{BOOST_LIBRARY_DIR})
+target_link_libraries(SyncClient $ENV{BOOST_LIBRARY_DIR})
 
 # TODO: 如有需要，请添加测试并安装目标。
