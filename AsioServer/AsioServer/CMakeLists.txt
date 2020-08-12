@@ -14,9 +14,13 @@ link_directories($ENV{BOOST_LIBRARY_DIR})
 add_executable (AsioServer "AsioServer.cpp" "AsioServer.h")
 add_executable (SyncServer "Test/SyncServer.cpp")
 add_executable (SyncClient "Test/SyncClient.cpp")
+add_executable (ASyncServer "Test/ASyncServer.cpp" "Test/ASyncServer.h")
+add_executable (ASyncClient "Test/ASyncClient.cpp" "Test/ASyncClient.h")
 
 target_link_libraries(AsioServer $ENV{BOOST_LIBRARY_DIR})
 target_link_libraries(SyncServer $ENV{BOOST_LIBRARY_DIR})
 target_link_libraries(SyncClient $ENV{BOOST_LIBRARY_DIR})
+target_link_libraries(ASyncServer $ENV{BOOST_LIBRARY_DIR})
+target_link_libraries(ASyncClient $ENV{BOOST_LIBRARY_DIR})
 
 # TODO: 如有需要，请添加测试并安装目标。
